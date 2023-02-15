@@ -36,15 +36,13 @@ function pageLoaded() {
       const contentMessage = document.createElement("span");
       if (from == "client") {
         message.classList.add("content-client");
-        contentMessage.classList.add("message");
-        contentMessage.classList.add("message-client");
+        contentMessage.className = "message message-client";
         contentMessage.innerHTML = `${info}`;
         message.append(contentMessage);
         console.log("client: " + info);
       } else if (from == "server") {
         message.classList.add("content-server");
-        contentMessage.classList.add("message");
-        contentMessage.classList.add("message-server");
+        contentMessage.className = "message message-server";
         contentMessage.innerHTML = `${info}`;
         message.append(contentMessage);
         console.log("server: " + info);

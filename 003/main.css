@@ -1,0 +1,224 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/* End Обнуление*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 30px;
+    height: -webkit-fill-available;
+}
+
+.main {
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    appearance: none;
+    padding: 10px 15px;
+    border: 0;
+    background: #4676d7;
+    color: #fff;
+    line-height: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.5s;
+    margin-left: 10px;
+}
+
+button:hover {
+    background: #1d49aa;
+    transition: background 0.5s;
+}
+
+input {
+    height: 35px;
+    width: 220px;
+    padding: 0 5px 0;
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
+    font-size: 12px;
+    border: 3px solid #4676d7;
+    flex: auto;
+}
+
+.content {
+    background-color: aliceblue;
+    flex: 100%;
+    min-height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.disconnect {
+    flex: 100%;
+    height: 23px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    text-align: end;
+}
+
+.btn-disconnect {
+    background: transparent;
+    padding: 0;
+}
+
+.btn-disconnect.active {
+    background-color: chartreuse;
+}
+
+.btn-disconnect:hover {
+    background-color: antiquewhite;
+}
+
+.message {
+    border-radius: 5px;
+    border: 3px solid #4676d7;
+    padding: 8px 16px;
+    display: inline-block;
+    position: relative;
+}
+
+.message::after {
+    content: attr(data-el);
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.message-client::after {
+    background: url(user.svg) center center / 100% auto no-repeat;
+    right: -26px;
+}
+
+.message-server::after {
+    background: url(server.svg) center center / 100% auto no-repeat;
+    left: -26px;
+}
+
+
+.message-client {
+    margin-right: 20px;
+}
+
+.message-server {
+    margin-left: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+p.content-client {
+    margin-bottom: 10px;
+    text-align: end;
+}
+
+button[disabled="true"] {
+    background: rgb(141, 150, 178);
+    cursor: auto;
+}
+
+a {
+    font-family: inherit;
+    color: #1d49aa;
+}
+
+a:hover {
+    font-family: inherit;
+    color: #1760fe;
+}
